@@ -1,0 +1,85 @@
+Scripting Languages and their usage:
+
+A Scripting Language is always interpreted and will never be compiled. 
+
+In JS, we will write the code and provide it to browser for execution, 
+
+Any errors w.r.t will be shown in the developer's console. 
+
+There are many Scripting Languages such as JavaScript, ActionScript, 
+Php, Python etc.. 
+
+Getting Started with JS:
+
+
+We use script tag to add JS Code. We can add JS code either in head or 
+in body section. 
+
+<html>
+
+<head>
+
+    <!-- <script>
+
+        alert("Good Morning!");
+        console.log("Hello Everyone!!");
+
+    </script> -->
+
+</head>
+
+<body>
+
+    <script>
+
+        alert("Good Morning!");
+        console.log("Hello Everyone!!");
+
+    </script>
+
+</body>
+
+</html>
+
+We can also add JS code in a seperate file and then we can use it in HTML. 
+
+index.html:
+
+<html>
+
+<head>
+
+    <!-- <script>
+
+        alert("Good Morning!");
+        console.log("Hello Everyone!!");
+
+    </script> -->
+
+</head>
+
+<body>
+
+    <script src="index.js">
+    </script>
+
+</body>
+
+</html>
+
+
+index.js:
+alert("Good Morning!");
+console.log("Hello Everyone!!");
+
+Environment Set up:
+
+
+1. Install Node.js:  https://nodejs.org/en/download/ 
+
+
+History of JS:
+
+https://en.wikipedia.org/wiki/JavaScript
+
+
