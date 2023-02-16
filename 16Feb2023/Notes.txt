@@ -1,0 +1,67 @@
+Problem Statement:
+
+Create a like icon and when user clicks on the like icon, increment 
+the count and display the updated count on the UI. 
+
+Algorithm:
+
+1. get the icon 
+
+Ref: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-thumbs-up 
+
+2. Make the icon clickable 
+
+   Note: use onclick event attribute 
+
+3. Add an event handler(function) for onclick event.
+
+  onclick= "likesIncrement()"
+
+4. declare a variable (global)
+
+5. on every click of the icon, increment the variable by 1 
+
+6. display the variable's value on the UI 
+
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <i onclick="likesIncrement()" class="fa fa-thumbs-up" style="font-size:48px;color:grey"></i> <span id="counter"
+        style="font-size: 40px">0</span>
+
+
+    <script>
+
+        var likesCount = 0;
+
+        function likesIncrement() {
+            likesCount = likesCount + 1;
+
+            document.getElementById("counter").innerHTML = likesCount;
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+Problem Statement : 
+
+Implement facebook login page. 
+
+Note:  we can verify the credentials with dummy user ( username/email = "x" , password ="y")

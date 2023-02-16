@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <i onclick="likesIncrement()" class="fa fa-thumbs-up" style="font-size:48px;color:grey"></i> <span id="counter"
+        style="font-size: 40px">0</span>
+
+
+    <script>
+
+        var likesCount = 0;
+
+        function likesIncrement() {
+            likesCount = likesCount + 1;
+
+            document.getElementById("counter").innerHTML = likesCount;
+
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
