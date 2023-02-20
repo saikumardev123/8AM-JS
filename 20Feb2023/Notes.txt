@@ -1,0 +1,99 @@
+Variable Hoisting:
+
+It is a default process where all the variable declarations are taken 
+to the top of the file before execution of the code. 
+
+code-snippet:
+
+var a = 10;
+console.log(a); // 10
+
+console.log(b); //20
+console.log(c); // 30
+
+var b = 20;
+var c = 30;
+
+/*
+
+After VH:
+
+var a,b,c; // undefined, undefined, undefined
+a=10;
+console.log(a); // 10
+console.log(b); //undefined
+console.log(c); // undefined
+b=20;
+c=30;
+
+*/
+
+
+
+code-snippet:
+
+
+var a = 100; // Global Variable
+function f1() {
+    console.log(a); //
+    var a = 9;
+}
+f1();
+console.log(a); // 100
+
+/*
+
+var a;
+a=100;
+function f1(){
+    var a; // undefined
+    console.log(a); // undefined
+    a=9;
+
+}
+
+f1();
+console.log(a);
+
+
+
+*/
+
+
+code snippet:
+
+
+var a = 100; // Global Variable
+function f1() {
+    console.log(a); // 100
+    a = 9;
+}
+f1();
+console.log(a); // 9 
+
+
+/*
+var a;
+a=100;
+function f1(){
+    console.log(a); // 100
+    a=9;
+}
+f1();
+console.log(a); // 9
+
+*/
+
+Task: 
+
+1. Explore more on Variable Hositing. 
+
+2. Look for interview questions.
+
+3. Attempt a quiz on Variable Hositing.
+
+
+Data Types:
+
+
+
