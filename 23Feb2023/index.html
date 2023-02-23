@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <div id="books">
+
+    </div>
+
+    <script>
+
+        var comments = [
+            {
+                id: 1011,
+                commentedBy: "Raj",
+                comment: "This book is really good",
+                replies: ["reply1", "reply2"]
+            },
+            {
+                id: 1012,
+                commentedBy: "Kiran",
+                comment: "Where can we get this book?"
+            },
+            {
+                id: 1013,
+                commentedBy: "Naveen",
+                comment: "Good Book"
+            },
+            {
+                id: 1014,
+                commentedBy: "Rajesh",
+                comment: "Good Chapters in book"
+            }
+        ];
+        var books = document.getElementById("books");
+        console.log(books);
+        books.innerHTML = "<ul><li>" + comments[0].id + "&nbsp;&nbsp;&nbsp;" + comments[0].commentedBy + "&nbsp;&nbsp;&nbsp;" + comments[0].comment + "&nbsp;&nbsp;" + comments[0].replies[0] + "&nbsp" + comments[0].replies[1];
+        books.innerHTML = books.innerHTML + "</li>";
+        books.innerHTML = books.innerHTML + "</ul>";
+        console.log(books.innerHTML);
+    </script>
+
+</body>
+
+</html>

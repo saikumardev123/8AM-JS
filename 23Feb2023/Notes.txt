@@ -1,0 +1,97 @@
+Problem Statement:
+
+Create a list of comments and display them on the UI. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <div id="books">
+
+    </div>
+
+    <script>
+
+        var comments = [
+            {
+                id: 1011,
+                commentedBy: "Raj",
+                comment: "This book is really good"
+            },
+            {
+                id: 1012,
+                commentedBy: "Kiran",
+                comment: "Where can we get this book?"
+            },
+            {
+                id: 1013,
+                commentedBy: "Naveen",
+                comment: "Good Book"
+            },
+            {
+                id: 1014,
+                commentedBy: "Rajesh",
+                comment: "Good Chapters in book"
+            }
+        ];
+        var books = document.getElementById("books");
+        console.log(books);
+        books.innerHTML = "<ul><li>" + comments[0].id + "&nbsp;&nbsp;&nbsp;" + comments[0].commentedBy + "&nbsp;&nbsp;&nbsp;" + comments[0].comment;
+        books.innerHTML = books.innerHTML + "</li>";
+        books.innerHTML = books.innerHTML + "</ul>";
+        console.log(books.innerHTML);
+
+    </script>
+
+</body>
+
+</html>
+
+
+code snippet:
+
+   var obj = {
+            "id": 101,
+            "name": "ravi",
+            "0": "hello"
+        }
+
+        console.log(obj.id); // []
+        console.log(obj["id"]);
+        console.log(obj[0]);
+
+
+usage of square brackets in objects: 
+
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var obj = [{
+            "id": 101,
+            "name": "ravi",
+            0: {
+                x: 1
+            }
+        }, {
+            "id": 102,
+            "name": "ravi",
+            0: {
+                x: 2
+            }
+        }
+        ]
+        console.log(obj.id); // []
+        console.log(obj["id"]);
+        console.log(obj[0]["0"].x);
+        console.log(obj[1][0].x);
+    </script>
+</body>
+</html>
+
