@@ -1,0 +1,86 @@
+JS Operators:
+
+Arithmetic Operators:
+
+ +,-,*,/(quotient),% (remainder), ++, --
+
+ <html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var a = 10;
+        console.log(a++); // prints 10, a= 10+1 = 11
+        console.log(++a); // a= 11 + 1 => 12, prints 12
+        console.log(--a); // 11, prints 11
+        console.log(a--); //  prints 11 and then a= 11-1 = 10
+        console.log(a);  // prints 10
+    </script>
+</body>
+
+</html>
+
+Comparision operators:
+
+>,<,>=,<=,==,===,!=,?:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        var a = 10, b = 20, c = "10", d = 10;
+
+        console.log(a < b);
+        console.log(a > b);
+        console.log(c < b);
+        console.log(a < c);
+        console.log(a == c); // checks the content
+        console.log(a === c); // checks content and datatype
+        console.log(a === d);
+        //  syntax of ?: ->    test_condition ?  <block> : <block>
+        a < b ? console.log("a is less than b") : console.log(" a is greater than b");
+
+    </script>
+</body>
+
+</html>
+
+
+Problem Statement: 
+
+Implement login system using ternary operator.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    username: <input type="text" id="username">
+    password: <input type="text" id="password">
+    <button onclick="login()">Login</button>
+    <script>
+        function login() {
+            // var username = document.getElementById("username").value;
+            // var password = document.getElementById("password").value;
+            // var usernameResult = username == "digital";
+            // var passwordResult = password == "lync";
+            // usernameResult && passwordResult ? alert("login success") : alert("login failure");
+            document.getElementById("username").value == "digital" && document.getElementById("password").value == "lync" ? alert("login success") : alert("login failure");
+        }
+    </script>
+</body>
+
+</html>
+
+
+

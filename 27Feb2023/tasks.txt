@@ -1,0 +1,10 @@
+1. Implement google translate using switch case.
+
+كيف حالك؟
+
+2. Finish the operators ( self learning)
+
+   logical operators, bitwise operators(optional), assignment operators. 
+
+3. Self learn - while, do-while and for loops 
+

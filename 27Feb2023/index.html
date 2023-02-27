@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+<body>
+
+    <select id="district" onchange="showTestCenters()">
+        <option>Select your District</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="nizamabad">Nimzamabad</option>
+        <option value="karimnagar">Karimnagar</option>
+    </select>
+
+    <h1 id="testCenters"></h1>
+
+    <script>
+
+        function showTestCenters() {
+            var district = document.getElementById("district").value;
+            console.log(district);
+            var testCenters = document.getElementById("testCenters");
+            switch (district) {
+                case "hyderabad": testCenters.innerHTML = "Test centers of Hyderabad"; break;
+                case "nizamabad": testCenters.innerHTML = "Test centers of nizamabad"; break;
+                case "karimnagar": testCenters.innerHTML = "Test centers of karimnagar"; break;
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</head>
+
+</html>

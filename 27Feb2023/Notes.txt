@@ -1,0 +1,118 @@
+Control Statements:
+
+There are 3 types of Control Statements. 
+1. Sequential 
+
+ if, if-else, switch
+
+2. Itertive 
+
+while, do-while and for
+
+3. Jump 
+
+break, continue and return. 
+
+
+Sequential:
+
+if-else:
+
+ if(test-condition){
+       // code
+ }
+ else{
+     //code
+ }
+
+
+  var age = 21;
+
+        if (age < 18) {
+
+            console.log("you are not eligible to vote");
+        }
+        else {
+            console.log("you are eligible to vote");
+        }
+
+
+switch:
+
+if we have more than 2 conditions, then we can use switch case.
+
+syntax:
+
+switch(choice){
+    case case_value1:  // code 
+    case case_value2:  // code 
+    case case_value3:  // code 
+    .
+    .
+    .
+    default :  // code
+}
+
+
+code_snippet:
+
+ var course = "react";
+        switch (course) {
+            case "java": console.log("90 hours"); break;
+            case "angular": console.log("45 hours"); break;
+            case "bootstrap": console.log("5 hours"); break;
+            default: console.log("this course is not available");
+        }
+
+
+The switch choice can be a string or a number.
+
+Realtime examples:
+
+PS: Create a list of district and display them in a drop down list. 
+based on the user selection, display the test centers. 
+
+<html>
+
+<head>
+
+<body>
+
+    <select id="district" onchange="showTestCenters()">
+        <option>Select your District</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="nizamabad">Nimzamabad</option>
+        <option value="karimnagar">Karimnagar</option>
+    </select>
+
+    <h1 id="testCenters"></h1>
+
+    <script>
+
+        function showTestCenters() {
+            var district = document.getElementById("district").value;
+            console.log(district);
+            var testCenters = document.getElementById("testCenters");
+            switch (district) {
+                case "hyderabad": testCenters.innerHTML = "Test centers of Hyderabad"; break;
+                case "nizamabad": testCenters.innerHTML = "Test centers of nizamabad"; break;
+                case "karimnagar": testCenters.innerHTML = "Test centers of karimnagar"; break;
+
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</head>
+
+</html>
+
+
+
+
+
+
