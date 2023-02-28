@@ -1,0 +1,9 @@
+1. Implement linkedin's connections feature. 
+2. Implement product management system using arrays and while loop. 
+        
+        1. create a form of 5 fields (pid, name, price...)
+        2. capture the entered details in to an array(products)
+        3. display the added products on the UI. 
+        4. add delete button for every product and when user clicks on the 
+        button, remove it from array.
+
