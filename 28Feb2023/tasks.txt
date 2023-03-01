@@ -6,4 +6,3 @@
         3. display the added products on the UI. 
         4. add delete button for every product and when user clicks on the 
         button, remove it from array.
-
