@@ -1,0 +1,21 @@
+
+1. Add the validations 
+
+    - product name is a string
+    - product price should be a number 
+    - desc , url should be strings 
+
+2. disable the add button initally and then enable it only when all the fields are 
+filled with values. 
+
+3. implement clear all functionality that clears all the products. 
+
+4. replace while with for loop.
+
+Optional:  Self Learn Local Storage and try performing the crud operations of products on 
+local storage.
+
+
+
+
+
