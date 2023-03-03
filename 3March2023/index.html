@@ -1,0 +1,150 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <form id="form">
+        <input type="text" id="product_name" placeholder="product name"> <br><br>
+        <input type="text" id="product_price" placeholder="product price"> <br><br>
+        <input type="text" id="product_description" placeholder="product description"> <br><br>
+        <input type="text" id="product_img_url" placeholder="product url"> <br><br>
+        <button id="addOrSave" onclick="addProduct()">Add Product</button>
+    </form>
+
+    <ol id="productList">
+
+    </ol>
+
+    <script>
+       
+         if(localStorage.getItem('products') == null){
+             localStorage.setItem('products', JSON.stringify([]));
+         }
+
+         showProducts();
+        function addProduct() {
+            event.preventDefault();
+            var name = getValueById("product_name");
+            var price = getValueById("product_price");
+            var desc = getValueById("product_description");
+            var imgUrl = getValueById("product_img_url");
+            var product = {
+                prodId: generateUniqueId(),
+                name: name,
+                price: price,
+                description: desc,
+                imageUrl: imgUrl
+            }
+            console.log(product);
+          var products =  JSON.parse(localStorage.getItem("products"));
+            products.push(product);
+             localStorage.setItem("products",JSON.stringify(products));
+            document.getElementById("form").reset();
+            showProducts();
+        }
+        function getValueById(id) {
+            var value = document.getElementById(id).value;
+            return value;
+        }
+        function showProducts() {
+            var products = JSON.parse(localStorage.getItem("products"));
+            var index = 0;
+            var productsList = "";
+            while (index < products.length) {
+                var product = products[index];
+                productsList = productsList + "<li>" + product.name + "&nbsp;&nbsp;&nbsp;" + product.price + "&nbsp;&nbsp;&nbsp;" + "<img style='width:42px; height:42px' src=" + product.imageUrl + ">" + "<button onclick='deleteProduct(" + product.prodId + ")'>Delete</button> " + "<button onclick='updateProduct(" + product.prodId + ")'>update</button>" + " </li > ";
+                index++;
+            }
+            document.getElementById("productList").innerHTML = productsList;
+        }
+
+    
+        function generateUniqueId() {
+        
+         if(localStorage.getItem("uniqueId") == null){
+             localStorage.setItem("uniqueId", 0);
+         }
+        var currentId =  parseInt(localStorage.getItem("uniqueId"));
+            currentId++;
+            localStorage.setItem("uniqueId", currentId);
+            return currentId;
+        }
+        function updateValue(id, inputValue) {
+            document.getElementById(id).value = inputValue;
+        }
+
+        /*                     
+               products = [ {pid:1} , {pid:2}, {pid:3}, {pid:4}]
+        */
+        function deleteProduct(pid) {
+            console.log(pid);
+            var index = 0;
+            while (index < products.length) {
+                var product = products[index];
+                if (product.prodId == pid) {
+                    products.splice(index, 1);
+                    break;
+                }
+                index++;
+            }
+            showProducts();
+        }
+
+        function updateProduct(pid) {
+
+            var index = 0;
+            while (index < products.length) {
+                var product = products[index];
+                if (product.prodId == pid) {
+                    updateValue("product_name", product.name);
+                    updateValue("product_price", product.price);
+                    updateValue("product_description", product.description);
+                    updateValue("product_img_url", product.imageUrl);
+                }
+                index++;
+            }
+
+            var addOrSave = document.getElementById("addOrSave");
+            addOrSave.innerHTML = "Save Product";
+            addOrSave.removeAttribute("onclick");
+            addOrSave.setAttribute('onclick', "saveProduct(" + pid + ")");
+
+        }
+
+        function saveProduct(pid) {
+            console.log("I am in saveProduct", pid);
+            event.preventDefault();
+            var name = getValueById("product_name");
+            var price = getValueById("product_price");
+            var desc = getValueById("product_description");
+            var imgUrl = getValueById("product_img_url");
+
+            var index = 0;
+            while (index < products.length) {
+                var product = products[index];
+                if (product.prodId == pid) {
+                    product.name = name;
+                    product.price = price;
+                    product.description = desc;
+                    product.imageUrl = imgUrl;
+                    break;
+                }
+                index++;
+            }
+            var addOrSave = document.getElementById("addOrSave");
+            addOrSave.innerHTML = "Add Product";
+            addOrSave.removeAttribute("onclick");
+            addOrSave.setAttribute('onclick', "addProduct()");
+            document.getElementById("form").reset();
+            showProducts();
+        }
+
+    </script>
+
+
+</body>
+
+</html>

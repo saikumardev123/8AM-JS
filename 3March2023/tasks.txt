@@ -1,0 +1,11 @@
+1. update the code for delete and update operations using localstorage. 
+
+2.  add some good css to the web page
+
+3. Self Learn:  Consuming Web Services  using javascript. 
+
+https://www.youtube.com/watch?v=rjmtYkRK1nM 
+
+https://www.youtube.com/watch?v=mLL5pdIbqWc 
+
+
