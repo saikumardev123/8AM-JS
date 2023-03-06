@@ -1,0 +1,160 @@
+Jump Statements:
+
+break, continue and return 
+
+break: To exit /terminate from a block, then we can use break. we 
+use break with switch. 
+
+continue:
+
+If we want to skip an iteration, then we can use continue. 
+
+<html>
+
+<head></head>
+
+<body>
+
+    <script>
+
+        for (var i = 0; i < 10; i++) {
+            if (i == 2) {
+                continue;
+            }
+            console.log(i);
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+PS:  remove the duplicate entries from an array without using 
+direct array functions.
+
+var arr= [1,2,4,5,5,6,6,6,4,2,4,5,4,3,4,5,5,674,245,6,7,8];
+
+
+<html>
+
+<head></head>
+
+<body>
+
+    <script>
+
+        var arr = [1, 2, 4, 5, 5, 6, 6, 6, 4, 2, 4, 5, 4, 3, 4, 5, 5, 674, 245, 6, 7, 8];
+        var newArr = []; // 1 2 4 5 6
+
+        for (var i = 0; i < arr.length; i++) {
+            if (newArr.includes(arr[i])) {
+                continue;
+            }
+            newArr.push(arr[i]);
+        }
+        arr = newArr;
+        console.log(arr);
+
+    </script>
+
+</body>
+
+</html>
+
+
+PS: sort the above array.
+
+return:  if we want to terminate a function based on some requirement, then we can use return. 
+
+<html>
+
+<head></head>
+
+<body>
+
+    <script>
+
+        function f1() {
+            var a = 10, b = 9;
+            if (a > b) {
+                return;
+            }
+            console.log(a);
+            console.log(b);
+        }
+        f1();
+    </script>
+
+</body>
+
+</html>
+
+PS: Create validation for username with following constraints, 
+
+ 1. username should not have a space  2. length should be 5 
+
+ <html>
+
+<head></head>
+
+<body>
+
+
+    <input type="text" id="username" placeholder="username here">
+    <button onclick="validate()">Submit</button>
+
+    <h1 id="message"></h1>
+
+    <script>
+
+        function validate() {
+            var message = document.getElementById("message");
+            var username = document.getElementById("username").value;
+            if (username.includes(" ")) {
+                console.log("checking space");
+                message.innerHTML = "username cannot have space";
+                return;
+            }
+            if (username.length < 5) {
+                console.log("checking length");
+                message.innerHTML = "username should be atleast 5 chars";
+            }
+            else {
+                console.log("else");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+Functions:
+
+A function is a block of code that may accept some input from user , process it and provides some result.
+
+syntax:
+
+   function function_name(parameters){
+ // code 
+
+   }
+   function_name(arguments);
+
+    function f1(a, b) {
+            console.log(a);
+            console.log(b);
+        }
+
+        f1(10, 20);
+
+
+
+
+
+
