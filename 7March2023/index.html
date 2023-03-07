@@ -1,0 +1,36 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        function f1(a) {
+            a();
+        }
+
+        function f2(a) {
+            a();
+        }
+
+        function f3(a) {
+            a();
+        }
+        var m = function () {
+            console.log("I am anonymous");
+        };
+
+        f1(m);
+        f2(m);
+        f3(m);
+        m = 100;
+        console.log(m);
+    </script>
+
+</body>
+
+</html>

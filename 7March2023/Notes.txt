@@ -1,0 +1,74 @@
+//Anonymous Functions
+
+A function without a name is known as Anonymous function. 
+
+function(){
+
+ // code
+
+
+}
+
+
+We pass functions as arguments to another function in JS. 
+
+function f1(x) {
+            // some processing
+            var result = 100;
+            x(result);
+        }
+        f1(function (y) {
+            console.log(y);
+        });
+
+Some predefined functions also expect a function as an argument (callback).
+
+
+        var arr = [10, 20, 30, 405, 90, 78];
+
+        arr.forEach(function (value) {
+            console.log(value);
+        })
+
+custom foreach:
+
+  function forEach(functionFn) {
+            for (var i = 0; i < arr.length; i++) {
+                functionFn(arr[i]); // functionFn(20)
+            }
+        }
+
+        forEach(function (value) {
+            console.log(value); // 10 20 30 405 90 78
+        })
+
+
+Function Expressions:
+
+if we can refer an anonmyous function with a variable then it is known as 
+function expressions. 
+
+ function f1(a) {
+            a();
+        }
+
+        function f2(a) {
+            a();
+        }
+
+        function f3(a) {
+            a();
+        }
+        var m = function () {
+            console.log("I am anonymous");
+        };
+
+        f1(m);
+        f2(m);
+        f3(m);
+        m = 100;
+        console.log(m);
+
+
+
+

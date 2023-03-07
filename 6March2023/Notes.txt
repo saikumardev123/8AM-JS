@@ -104,7 +104,7 @@ PS: Create validation for username with following constraints,
 <body>
 
 
-    <input type="text" id="username" placeholder="username here">
+    <input type="text" id="username" placeholder="username here" required>
     <button onclick="validate()">Submit</button>
 
     <h1 id="message"></h1>
