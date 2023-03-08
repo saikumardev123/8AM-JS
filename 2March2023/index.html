@@ -24,6 +24,7 @@
             event.preventDefault();
             var name = getValueById("product_name");
             var price = getValueById("product_price");
+            // var price = parseInt(getValuebyId("product_price"));
             var desc = getValueById("product_description");
             var imgUrl = getValueById("product_img_url");
             var product = {
@@ -45,11 +46,14 @@
         function showProducts() {
             var index = 0;
             var productsList = "";
-            while (index < products.length) {
-                var product = products[index];
+            products.forEach(function (product) {
                 productsList = productsList + "<li>" + product.name + "&nbsp;&nbsp;&nbsp;" + product.price + "&nbsp;&nbsp;&nbsp;" + "<img style='width:42px; height:42px' src=" + product.imageUrl + ">" + "<button onclick='deleteProduct(" + product.prodId + ")'>Delete</button> " + "<button onclick='updateProduct(" + product.prodId + ")'>update</button>" + " </li > ";
-                index++;
-            }
+            })
+            // while (index < products.length) {
+            //     var product = products[index];
+            //     productsList = productsList + "<li>" + product.name + "&nbsp;&nbsp;&nbsp;" + product.price + "&nbsp;&nbsp;&nbsp;" + "<img style='width:42px; height:42px' src=" + product.imageUrl + ">" + "<button onclick='deleteProduct(" + product.prodId + ")'>Delete</button> " + "<button onclick='updateProduct(" + product.prodId + ")'>update</button>" + " </li > ";
+            //     index++;
+            // }
             document.getElementById("productList").innerHTML = productsList;
         }
 

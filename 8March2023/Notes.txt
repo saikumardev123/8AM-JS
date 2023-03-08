@@ -1,0 +1,74 @@
+First Class Functions:
+
+In JS, Functions are treated as first class citizens hence these functions 
+in JS are called as First class functions. 
+
+A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        function outer() {
+            function inner() {
+                console.log("I am inner function");
+            }
+
+            return inner;
+
+        }
+        // var x = outer();
+        // x();
+       // outer()();
+
+
+    </script>
+
+</body>
+
+</html>
+
+IIFE: 
+
+Immediately invoked function expressions or self invoking functions.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        (function () {
+            console.log("fetching users.....");
+        })();
+
+        (function () {
+            console.log("fetching products.....");
+        })();
+
+        (function () {
+            console.log("fetching sellers.....");
+        })();
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
