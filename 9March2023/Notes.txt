@@ -1,0 +1,47 @@
+
+Web Services in JS:
+
+Front End  (UI)             Back End (Data Processing)
+
+Web Service:
+
+A service(resource) that is active over the web and can be accessed via 
+internet is known as web service. 
+
+
+Web Application:   HTML + CSS + JAVA+ DB LOGIC  (Tightly coupled architecture)
+
+                   FrontEnd()            Backend(microservices (each functionlity runs seperately as a service))
+
+
+
+
+  PVR Cinemas - 1 PM - Screen 2  - 20 tickets  (seating arrg, no of seats) 
+
+
+  Data Providers (Web Services):
+
+
+   BMS  -  p1 - 5 tickets  (15) - p5 - 2 tickets (0)
+   Paytm - p2 - 10 tickets (5)
+   JustTickets - p3 - 2 tickets (3)
+   PVR - p4 - 1 ticket (2)
+
+
+
+Data Providers - Cricket APIs
+
+   CriBuzz -  
+   
+   UI - Score 
+
+
+
+
+
+
+
+
+
+
+

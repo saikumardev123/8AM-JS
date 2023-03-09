@@ -58,6 +58,7 @@ Immediately invoked function expressions or self invoking functions.
         (function () {
             console.log("fetching sellers.....");
         })();
+
     </script>
 </body>
 
