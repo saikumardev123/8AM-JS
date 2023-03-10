@@ -1,0 +1,42 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <input type="text" placeholder="enter search term" onkeyup="searchFilter()">
+
+    <ul id="productsList">
+
+    </ul>
+
+    <script>
+        // http 
+        var products;
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.open("get", "https://fakestoreapi.com/products");
+        httpRequest.send();
+        var productsList = document.getElementById("productsList");
+        httpRequest.onreadystatechange = function () {
+            console.log(httpRequest.readyState);
+            if (httpRequest.readyState == 4) {
+                //console.log(httpRequest.responseText);
+                products = JSON.parse(httpRequest.responseText);
+                var productsContent = "";
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    productsContent = productsContent + "<li>" + product.title + "&nbsp;&nbsp;" + product.price + " &nbsp;&nbsp;" + "<img width='50px' height='50px' src='" + product.image + "'>" + "</li>";
+                }
+                productsList.innerHTML = productsContent;
+            }
+        }
+        function searchFilter() {
+            // logic to filter the products based on the search term
+        }
+    </script>
+
+</body>
+
+</html>

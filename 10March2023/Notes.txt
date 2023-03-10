@@ -1,0 +1,22 @@
+Problem Statement:
+
+
+part 1:
+Make an API call using XMLHttpRequest to https://fakestoreapi.com/products
+
+Step 1:  Make api call and handle the response in onreadystatechange event.
+
+Step 2:  convert the data from string to javascript array. 
+
+        var products =  JSON.parse(http.responseText)
+
+Step 3:  use while / for loop - iterate the list of products and display each product on the UI with 
+the following details. 
+
+title , price and image (<img src="+image+">)
+
+
+part 2:
+once we are able to display the content on UI, create a search field (text field - onkeyup()), when user enters 
+the name of the product, display the product information. 
+
