@@ -1,0 +1,4 @@
+Call, Apply and Bind:
+
+
+Call: 

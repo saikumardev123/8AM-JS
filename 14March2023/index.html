@@ -1,0 +1,33 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var employee = {
+            eid: 101,
+            name: "kiran",
+            designation: "developer",
+            getDetails: function (x, y, z) { // m1
+                return this.eid + "\t" + this.name + "\t" + this.designation + "\t" + x + "\t" + y + "\t" + z;
+            }
+        }
+        var employee2 = {
+            eid: 102,
+            name: "rajesh",
+            designation: "developer"
+        }
+
+        var arr = [10, 20, 30];
+
+        console.log(employee.getDetails.call(employee2, arr[0], arr[1], arr[2]));
+        console.log(employee.getDetails.apply(employee2, arr));
+
+
+
+
+    </script>
+</body>
+
+</html>
