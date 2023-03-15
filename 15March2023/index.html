@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        function user(username, password) {
+            function login() { // inner function,nested function
+                if (username == "xyz" && password == "uii") {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            return login;
+        }
+
+        console.log(user("xyz", "uii")());
+
+
+
+
+    </script>
+</body>
+
+</html>

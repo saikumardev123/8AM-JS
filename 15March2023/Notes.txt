@@ -1,0 +1,60 @@
+call by value and call by reference:
+<html>
+<head>
+</head>
+<body>
+    <script>
+        // call by value examples
+        function f1(y) {
+            console.log(y); // 100
+            y = 200;
+        }
+        var a = 100;
+        f1(a); // f1(100) // primitive values - call by value
+        console.log(a); //100 
+        var str = "hello";
+        function f2(m) {
+            m = m.concat("world");
+            console.log(m); //helloworld
+        }
+        f2(str); // primitive values - call by value
+        console.log(str); //hello
+
+        // call by reference examples
+        
+        var arr = [10, 20, 30];
+        var arr2 = arr;
+
+        function f3(y) {
+            y.push(40, 50);
+            console.log(y);
+        }
+        f3(arr); // call by reference - non primitive values f3("xushdcs")
+        console.log(arr.length); //
+        console.log(arr);
+
+        // https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/
+
+    </script>
+</body>
+</html>
+
+closures:
+
+A closure is an inner function that is created to implement private functions 
+in JS.
+
+ function user(username, password) {
+            function login() { // inner function,nested function
+            
+                if (username == "xyz" && password == "uii") {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            return login;
+        }
+
+        console.log(user("xyz", "uii")());
