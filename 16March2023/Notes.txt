@@ -1,0 +1,121 @@
+Array Methods:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        // foreach vs filter vs map 
+
+        var arr = [0, 2, 3, 5, 6, 7, 10, 20];
+
+        // for each - to iterate the data
+
+        var resultArray = arr.forEach(function (value) {
+            //console.log(value);
+            return value * 2;
+        }) // [0,4,6,12,14,20,40]
+        console.log(resultArray);
+        console.log(arr);
+
+        // For each does not return any value as a result.
+
+        var numbersArr = [0, 2, 3, 5, 6, 7, 10, 20, "hello", ""];
+        console.log(numbersArr);
+
+        var res = numbersArr.filter(function (elm) {
+            return elm;
+        })
+        console.log(res); // 
+
+        var array = [0, 2, 3, 5, 6, 7, 10, 20, "hello", "hey"];
+
+        var stringResult = array.filter(function (arrValue) {
+
+            return typeof arrValue == "string"
+
+        })
+        console.log(stringResult);
+
+        var arrMap = [0, 2, 3, 5, 6, 7, 10, 20];
+
+        var mapResult = arrMap.map(function (elm) {
+            return elm * 2;
+        })
+        console.log(mapResult);
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var arr = [10, 8, 21, 0, 27, 32, -1, -2];
+
+        var resultArr = arr.sort(function (a, b) {
+            return b - a;
+        })
+        console.log(resultArr);
+
+    </script>
+
+</body>
+
+</html>
+
+Numbers:
+
+There are 2 ways to create numbers. 
+
+1.using primitive type 
+2. using non primitive type
+
+  <script>
+        var a = 100;
+        var x = new Number(100);
+        console.log(a == x);
+        console.log(a === x);
+
+        var rating = 4.1234;
+
+        console.log(rating.toFixed(2));
+        console.log(rating.toPrecision(3));
+
+    </script>
+
+
+Date: 
+JS provides date object and we can store / retrive the date information. 
+
+  var date = new Date();
+
+        console.log(date.getDate());
+        console.log(date.getMonth());
+        console.log(date.getFullYear());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+        console.log(date.getSeconds());
+
+
+PS:  Create a time stamp in the following format. 
+
+ hh:mm:ss  dd/mm/yyyy 
+
+ 08:55:09   16/03/2023

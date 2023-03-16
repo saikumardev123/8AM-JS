@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+
+        function timeStamp() {
+
+            var date = new Date();
+
+            var time = addZero(date.getHours()) + ":" + addZero(date.getMinutes()) + ":" + addZero(date.getSeconds());
+            var date_related = addZero(date.getDate()) + "/" + addZero(date.getMonth() + 1) + "/" + addZero(date.getFullYear());
+
+            console.log(time + "\t" + date_related);
+
+        }
+
+        timeStamp();
+
+
+        function addZero(input) {
+
+            if (input < 10) {
+                input = '0' + input;
+            }
+            return input;
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
