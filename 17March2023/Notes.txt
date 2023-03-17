@@ -1,0 +1,56 @@
+Strings:
+
+Problem Statement:
+
+1. Find the number of  occurances of a character in a string.
+
+  var str= "hello how are you doing"; 
+  
+  h -> 2
+
+  function findOccurance(str,char){
+
+ // code 
+
+  }
+  findOccurance(str,'h'); // 2
+
+
+  solution: 
+
+  <html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        function findOccurance(str, char) {
+            // var strArr = str.split('');
+            var counter = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == char) {
+                    counter++;
+                }
+            }
+            console.log(counter);
+            // var result = strArr.filter(function (value) {
+            //     return value == char;
+            // })
+            // console.log(result.length);
+        }
+        var str = "hello how are you doing";
+        findOccurance(str, 'l');
+    </script>
+</body>
+
+</html>
+
+
+PS: Find the occurances of each character in the string. 
+
+hello how are you
+
+
+

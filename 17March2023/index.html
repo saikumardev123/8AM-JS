@@ -1,0 +1,46 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var str = "hello how are you";
+        function findOccurances(str) {
+
+            var splitArr = str.split("");
+            console.log(splitArr);
+            splitArr = splitArr.filter(function (value) {
+                return value != " ";
+            })
+
+            var newArr = [];
+
+            splitArr.forEach(function (value) {
+                if (!newArr.includes(value)) {
+                    newArr.push(value);
+                }
+            })
+            console.log(newArr);
+
+            newArr.forEach(function (value) {
+                findOccurance(str, value);
+            })
+
+        }
+        findOccurances(str);
+        function findOccurance(str, char) {
+            var counter = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == char) {
+                    counter++;
+                }
+            }
+            console.log(char + ":" + counter);
+
+        }
+
+    </script>
+</body>
+
+</html>
