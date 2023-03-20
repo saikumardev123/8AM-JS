@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        function Customer(cid, accNo, accBalance) {
+            this.cid = cid;
+            this.accNo = accNo;
+            this.accBalance = accBalance;
+        }
+
+        Customer.prototype.deposit = function (amount) {
+            this.accBalance = this.accBalance + amount;
+        }
+
+        Customer.prototype.withDraw = function (amount) {
+            this.accBalance = this.accBalance - amount;
+        }
+
+
+
+        var customer1 = new Customer(101, 1022, 9000);
+        var customer2 = new Customer(102, 1023, 19000);
+        var customer3 = new Customer(103, 1024, 91000);
+        console.log(customer1);
+        console.log(customer2);
+        console.log(customer3);
+
+        customer1.deposit(2000);
+        console.log(customer1.accBalance);
+        customer2.withDraw(9000);
+        console.log(customer2.accBalance);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

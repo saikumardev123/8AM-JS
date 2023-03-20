@@ -7,26 +7,21 @@
     <script>
         var str = "hello how are you";
         function findOccurances(str) {
-
             var splitArr = str.split("");
             console.log(splitArr);
             splitArr = splitArr.filter(function (value) {
                 return value != " ";
             })
-
             var newArr = [];
-
             splitArr.forEach(function (value) {
                 if (!newArr.includes(value)) {
                     newArr.push(value);
                 }
             })
             console.log(newArr);
-
             newArr.forEach(function (value) {
-                findOccurance(str, value);
+                findOccurance(splitArr, value);
             })
-
         }
         findOccurances(str);
         function findOccurance(str, char) {

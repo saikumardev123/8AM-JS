@@ -1,0 +1,157 @@
+Object:
+syntax:
+var obj = {
+    key : value
+}
+var employee = {
+   name: "kiran",
+   address: "hyd"
+}
+
+Methods:
+
+1. create: It allows us to create a new object from existing object.
+
+  var bank = {
+            bank_name: "ICICI Bank",
+            branch: "Madhapur"
+        }
+        var customer = Object.create(bank);
+        console.log(customer);
+        console.log(customer.bank_name);
+        console.log(customer.branch);
+        customer.customerId = "CID788688";
+        customer.accNo = 123456544;
+        customer.balance = 20000;
+        console.log(customer);
+
+2. keys and values:
+
+   var bank = {
+            bank_name: "ICICI Bank",
+            branch: "Madhapur",
+            branchManager: "Naveen"
+        }
+        console.log(Object.keys(bank));
+
+        console.log(Object.values(bank))
+
+
+3. freeze: It does not allow the user to modify, create and delete the content.
+
+   var config = Object.freeze({
+            port_no: 6877,
+            ip_address: "187.11.23.11",
+            serverId: 898999
+        });
+        console.log(config);
+        config.port_no = 9000;
+        config.username = "Server12345";
+        console.log(config);
+
+4. seal :  It  allows the user to modify the content however does not allow to create and delete the content.
+
+var config = Object.seal({
+            port_no: 6877,
+            ip_address: "187.11.23.11",
+            serverId: 898999
+        });
+        console.log(config);
+        config.port_no = 9000;
+        config.username = "Server12345";
+        delete config.port_no;
+        console.log(config);
+
+
+
+Task: Look at all other functions of Object Constructor. 
+
+
+Function Constructor:
+
+A function Constructor is used to define a template for creating 
+mulitple same objects with different data.
+
+syntax :
+
+same as function , however, the function constructor name should start with 
+upper case letter. 
+
+        function Employee(eid, name, address) {
+            this.eid = eid;
+            this.name = name;
+            this.address = address;
+        }
+        var employee = new Employee(101, "kiran", "hyderabad"); // {}
+        var employee2 = new Employee(102, "raj", "secunderabad"); // {}
+        var employee3 = new Employee(103, "nikhil", "hyderabad"); // {}
+        console.log(employee);
+        console.log(employee2);
+        console.log(employee3);
+
+        // this - current object
+
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+
+        function Customer(cid, accNo, accBalance) {
+            this.cid = cid;
+            this.accNo = accNo;
+            this.accBalance = accBalance;
+        }
+
+        Customer.prototype.deposit = function (amount) {
+            this.accBalance = this.accBalance + amount;
+        }
+
+        Customer.prototype.withDraw = function (amount) {
+            this.accBalance = this.accBalance - amount;
+        }
+        var customer1 = new Customer(101, 1022, 9000);
+        var customer2 = new Customer(102, 1023, 19000);
+        var customer3 = new Customer(103, 1024, 91000);
+        console.log(customer1);
+        console.log(customer2);
+        console.log(customer3);
+
+        customer1.deposit(2000);
+        console.log(customer1.accBalance);
+        customer2.withDraw(9000);
+        console.log(customer2.accBalance);
+
+    </script>
+
+</body>
+
+</html>
+
+Task: 
+
+
+Create a table dynamically for the following data:
+
+var customers = [{cid: 101, accNo: 1022, accBalance: 9000,},
+ {cid: 102, accNo: 1023, accBalance: 19000},
+{cid: 103, accNo: 1024, accBalance: 91000}];
+
+
+
+cid        accNo           accBalance   // keys()
+
+101          1022             9000
+
+102           1023             19000
+
+
+
+
