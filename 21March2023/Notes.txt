@@ -1,0 +1,3 @@
+var customers = [{cid: 101, accNo: 1022, accBalance: 9000,},
+ {cid: 102, accNo: 1023, accBalance: 19000},
+{cid: 103, accNo: 1024, accBalance: 91000}];

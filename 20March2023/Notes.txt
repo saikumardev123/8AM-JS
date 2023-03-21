@@ -137,20 +137,19 @@ upper case letter.
 
 Task: 
 
-
 Create a table dynamically for the following data:
 
 var customers = [{cid: 101, accNo: 1022, accBalance: 9000,},
  {cid: 102, accNo: 1023, accBalance: 19000},
 {cid: 103, accNo: 1024, accBalance: 91000}];
 
-
-
 cid        accNo           accBalance   // keys()
 
 101          1022             9000
 
 102           1023             19000
+
+
 
 
 
