@@ -1,0 +1,97 @@
+Validations:
+
+To validate the data provided by the user, we need to apply validations 
+to the respective fields.
+
+Basic validations can be provided using JS logic however the 
+advanced validations such as password should be atleast 8 chars, 
+1 upper case, 1 lower case, 1 digit,1 special character etc requires 
+a lot of logic to be written. inorder to simplify the code, we can 
+use regular expressions to implement advanced validations.
+
+Basic Validations:
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <!--
+        password should be atleast 8 chars, 
+1 upper case, 1 lower case, 1 digit,1 special character
+    -->
+
+    Enter password: <input type="text" id="password"> <span id="msg" style="color:red"></span>
+    <button onclick="validate()">Submit</button>
+    <script>
+        var msg = document.getElementById("msg");
+        function validate() {
+            var password = document.getElementById("password").value;
+            if (password.length < 8) {
+                msg.innerHTML = "password should be atleast 8 chars";
+            }
+           
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+Regular Expressions:
+
+The regular expressions are used to create search patterns. 
+
+Problem Statement:
+
+var str="Happy Ugadi to everyone!";
+
+find the occurance of character 'p' from the above str.
+
+
+Modifiers:
+
+g: global search 
+
+i: case insensitivity
+
+ var str = "Happy Ugadi to everyone! PeoPle";
+
+        var pattern = /p/gi;
+
+        console.log(str.match(pattern).length);
+
+
+brackets:
+
+[abc]:
+
+
+
+   var str = "xHellxdy";
+        var pattern = /x[abc]y/; //  xay , xby , xcy
+        console.log(pattern.test(str));
+
+
+
+[a-z]:
+
+var str = "1hell1Aa";
+        var pattern = /[0-9][A-Z][a-z]/;
+        console.log(pattern.test(str));
+
+
+
+[^A-Z]:
+
+ var str = "123AB";
+        var pattern = /[^A-Z]/;
+        console.log(pattern.test(str));
+
+
+
