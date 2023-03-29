@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    Enter password : <input onpaste="return onPasteHandler()" type="text" oncopy="return onCopyHandler()" id="password"
+        placeholder="enter password">
+    <br><br>
+    Confirm Password: <input onpaste="return onPasteHandler()" type="text" id="confirmPassword"
+        placeholder="confirm password"><br><br>
+
+    <h1 id="msg" style="color:red"></h1>
+    <script>
+
+        var msg = document.getElementById("msg");
+
+        function onCopyHandler() {
+            msg.innerHTML = "Copying is disabled";
+            return false;
+        }
+
+        function onPasteHandler() {
+            msg.innerHTML = "Pasting is disabled";
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>
+

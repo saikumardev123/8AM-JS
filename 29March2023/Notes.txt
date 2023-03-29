@@ -1,0 +1,187 @@
+Scopes and Events:
+
+Scopes:
+
+There are 2 types of scopes. 
+
+1.local :  all the local variables will be created in local scope and 
+the local scope gets active when a function starts the execution.
+
+2. global : all the global variables come under global scope. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        console.log(a);
+        console.log(b);
+        var a = 10;  // global scope
+        var b = 20;  // global scope
+        function f1() {
+            var c = 30; // local scope
+            var d = 40; // local scope
+            console.log(a); 
+            console.log(b);
+            console.log(c);
+            console.log(d);
+        }
+        f1();
+    </script>
+</body>
+
+</html>
+
+Events:
+
+JS provides hundereds of events to perform based on the functionality such as 
+onclick, on mouseover, onmouseout, onprint... 
+
+
+Problem Statements: 
+
+Create a password and confirm password field  and add the 
+following restrictions. 
+
+in password field, the user should not copy the content. 
+in confirm field, the user should not paste any content. 
+provide the informational messages. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    Enter password : <input onpaste="return onPasteHandler()" type="text" oncopy="return onCopyHandler()" id="password"
+        placeholder="enter password">
+    <br><br>
+    Confirm Password: <input onpaste="return onPasteHandler()" type="text" id="confirmPassword"
+        placeholder="confirm password"><br><br>
+
+    <h1 id="msg" style="color:red"></h1>
+    <script>
+
+        var msg = document.getElementById("msg");
+
+        function onCopyHandler() {
+            msg.innerHTML = "Copying is disabled";
+            return false;
+        }
+
+        function onPasteHandler() {
+            msg.innerHTML = "Pasting is disabled";
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+Problem Statement: 
+
+Disable the right click on a page. 
+
+<html>
+
+<head>
+
+</head>
+
+<body oncontextmenu="return rightClick()">
+
+    Enter password : <input onpaste="return onPasteHandler()" type="text" oncopy="return onCopyHandler()" id="password"
+        placeholder="enter password">
+    <br><br>
+    Confirm Password: <input onpaste="return onPasteHandler()" type="text" id="confirmPassword"
+        placeholder="confirm password"><br><br>
+
+    <h1 id="msg" style="color:red"></h1>
+    <script>
+
+        var msg = document.getElementById("msg");
+
+        function onCopyHandler() {
+            msg.innerHTML = "Copying is disabled";
+            return false;
+        }
+
+        function onPasteHandler() {
+            msg.innerHTML = "Pasting is disabled";
+            return false;
+        }
+
+        function rightClick(){
+            msg.innerHTML = "RightClick is disabled";
+            return false; 
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+PS:  Implement highlighting and dehighligting of an image. 
+
+
+events: onmouseover and onmouseout 
+
+function onMouseOver() {
+            document.getElementById("printerImage").height = "300";
+            document.getElementById("printerImage").width = "300";
+
+        }
+
+        function onMouseLeave() {
+            document.getElementById("printerImage").height = "100";
+            document.getElementById("printerImage").width = "100";
+
+        }
+
+
+code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id=image src="https://rukminim1.flixcart.com/image/200/200/cms-rpd-img/3e63e64957ea404ebf3f214f185b5bf4_184c286518b_image.jpeg?q=90" onmouseover="hight()" onmouseout="normalImg()" width="168px" height="126px">
+<script>
+    function hight()
+    {
+        document.getElementById("image").style.width="178px";
+        document.getElementById("image").style.width="136px";
+    }
+    function normalImg()
+    {
+        document.getElementById("image").style.width="168px";
+        document.getElementById("image").style.width="126px";
+    }
+</script>
+</body>
+</html>
+
+
+PS:  Create a drop down list of 2 options, based on the selected option display the selected option 
+on the UI. 
+
+hint: onchange()
+
+
+
