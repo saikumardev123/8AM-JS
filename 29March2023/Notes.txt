@@ -182,6 +182,3 @@ PS:  Create a drop down list of 2 options, based on the selected option display 
 on the UI. 
 
 hint: onchange()
-
-
-

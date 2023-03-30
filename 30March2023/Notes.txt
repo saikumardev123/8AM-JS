@@ -1,0 +1,102 @@
+Error Handling:
+
+Whenever an error occurs, then the application / program gets terminated abnormally. in other words, 
+when an error occurs, the application gets crashed.
+
+Error Handling is not about fixing the error, its about finding an alternative way to continue the 
+execution of the code.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var a = 10, b = 20;
+        var user = null;
+        function fetchUser() {
+            // API Call 
+            // user = {
+            //     name: "kiran"
+            // }
+        }
+        fetchUser();
+        try {
+            console.log("opening a file");
+            console.log(user.name);
+        } catch (error) {
+            console.log(error);
+            //simulating the error 
+            throw new Error("unaccesible code");
+        } finally {
+            console.log("closing a file");
+        }
+        console.log(a);
+        console.log(b);
+        console.log(a + b);
+
+    </script>
+</body>
+
+</html>
+
+
+Types of Errors:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors
+
+Garbage Collection:
+
+GC is the process of finding the unused / dereferenced object (anonymous objects), marking 
+them and sweeping out from the memory is known as GC. 
+
+Runtime engine maintains a threshold (for ex 70%) for the memory, when the 
+limit reaches the threshold,then it calls Garbage Collector. 
+
+The GC finds the unused / dereferenced objects and remove them. 
+
+
+As a developer, our responsibility is to write garbage collection friendly code. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var employee = {
+            name: "kiran"
+        }
+        console.log(employee.name);
+        employee = null; // nullification
+        console.log(employee);
+    </script>
+</body>
+
+</html>
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management
+
+
+Best coding practices:
+
+1. Writing the comments above the functions to provide a concise information to 
+the other developers. 
+
+2. less use of global variables 
+
+3. use  === instead of   == 
+
+4. use meaningful names to variables, functions, constants, objects etc..
+
+5. use tools like JSLint to get the warnings on coding standards.
+
+6. always make sure a function should have only one functionality. 
+
+
+Task: Find out more best coding practices is JS
+
