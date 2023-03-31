@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="username">
+    <p>This is some paragraph!</p>
+    <button onclick="capture()">Capture</button>
+    <button onclick="view()">View items</button>
+    <script>
+        function capture() {
+            var username = document.getElementById("username");
+            console.log(username.value);
+            var p = document.getElementsByTagName("p");
+            console.log(p);
+            p[0].style.color = "red";
+            p[0].style.fontSize = "30px";
+            // getElementsByName,getElementsByClassName
+        }
+        function view() {
+            window.location.href = "https://www.facebook.com/";
+        }
+    </script>
+</body>
+</html>

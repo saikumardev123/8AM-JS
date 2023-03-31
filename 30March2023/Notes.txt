@@ -100,3 +100,13 @@ the other developers.
 
 Task: Find out more best coding practices is JS
 
+
+
+
+
+
+
+
+
+
+

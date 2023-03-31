@@ -1,0 +1,156 @@
+Working with DOM:
+
+DOM - Document Object Model. 
+
+Whenever a html page is given to browser, the runtime engine generates a tree with 
+a list of objects using DOM. 
+
+So we can use DOM to manipulate the HTML/CSS Content dynamically. 
+
+DOM provides few predefined methods / properties to perform the following 
+operations. 
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+JS provides "document" object to work with DOM Manipulation. 
+
+Methods:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="username">
+    <p>This is some paragraph!</p>
+    <button onclick="capture()">Capture</button>
+    <script>
+        function capture() {
+
+            var username = document.getElementById("username");
+            console.log(username.value);
+            var p = document.getElementsByTagName("p");
+            p[0].style.color = "red";
+            p[0].style.fontSize = "30px";
+
+
+            // getElementsByName,getElementsByClassName
+        }
+    </script>
+</body>
+
+</html>
+
+Events and Event Listener in DOM:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="username">
+    <p>This is some paragraph!</p>
+    <button name="captureBtn">Capture</button>
+    <script>
+        function capture() {
+
+            var username = document.getElementById("username");
+            console.log(username.value);
+            var p = document.getElementsByTagName("p");
+            p[0].style.color = "red";
+            p[0].style.fontSize = "30px";
+
+
+            // getElementsByName,getElementsByClassName
+        }
+        var captureBtn = document.getElementsByName("captureBtn");
+        captureBtn[0].onclick = capture;
+
+    </script>
+</body>
+
+</html>
+
+Nodes: 
+
+Every HTML element is considered as Node. 
+
+We can create, update, delete the node.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var form = document.createElement("form");
+        console.log(form);
+
+        var username = document.createElement("input");
+
+        username.id = "username";
+        username.placeholder = "username here";
+        console.log(username);
+
+        var password = document.createElement("input");
+
+        password.id = "password";
+        password.placeholder = "password here";
+        password.type = "password";
+        console.log(password);
+        form.appendChild(username);
+        form.appendChild(password);
+        console.log(form);
+
+        var button = document.createElement("button");
+        button.innerHTML = "login";
+
+        form.appendChild(button);
+
+        var body = document.getElementsByTagName("body");
+        body[0].appendChild(form);
+
+    </script>
+</body>
+
+</html>
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div>
+        <p>This is some paragraph!</p>
+    </div>
+
+    <script>
+
+        var body = document.body;
+        body.firstChild.nextSibling.firstChild.nextSibling.style.color = "green";
+
+
+    </script>
+</body>
+
+</html>
+
+Self Learing: Collections(HTMLCollection) vs Node Lists(NodeList)
+
