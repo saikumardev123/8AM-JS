@@ -20,11 +20,59 @@
     <hr>
 
     <!--create login form-->
+    <!-- Implement validations-->
+
+    <br><br>
+    <center>
+        <form>
+            <input size="40" type="text" id="username" placeholder="username here"> <br><br><br>
+            <input size="40" type="password" id="password" placeholder="password here"><br><br><br>
+            <button onclick="login()">Login</button>
+
+        </form>
+    </center>
 
     <!-- capture username and password-->
 
-    <!-- navigate to dashboard if username and password matched.-->
+    <script>
 
+
+
+        function login() {
+
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+
+            var users = JSON.parse(localStorage.getItem("users"));
+
+            var loginStatus = 2;
+
+            users.forEach(function (user) {
+                if (user.username == username) {
+                    if (user.password == password) {
+                        loginStatus = 0
+                    }
+                    else {
+                        loginStatus = 1
+                    }
+                }
+            })
+
+            if (loginStatus == 2) {
+                alert("user not found");
+            }
+            if (loginStatus == 1) {
+                alert("password  incorrect");
+            }
+            if (loginStatus == 0) {
+                window.location.href = "../Dashboard/dashboard.html";
+            }
+        }
+
+
+    </script>
 </body>
 
 
