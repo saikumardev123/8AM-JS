@@ -1,0 +1,19 @@
+a{
+    text-decoration: none;
+    color:blue;
+    margin-left:30px;
+    font-family: cursive;
+    font-size:20px;
+}
+a:hover{
+    background-color: blue;
+    color:white
+}
+h1{
+    text-align: center;
+    color:blue;
+}
+h1:hover{
+    color:white;
+    background-color: blue
+}

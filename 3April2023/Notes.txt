@@ -1,0 +1,7 @@
+Project: E-Commerce Application 
+
+Functionalities: 
+
+login, register, product management, user management, add to cart......
+
+

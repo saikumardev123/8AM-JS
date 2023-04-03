@@ -1,0 +1,80 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="../index.css">
+
+</head>
+
+<body>
+
+    <h1>E-Commerce Application</h1>
+    <hr>
+    <a href="../Login/login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="../index.html">Home</a>
+    <a href="../Products/products.html">Products</a>
+    <hr>
+
+    <!-- Create a form with 3 fields username, password, emailId-->
+    <br><br>
+    <center>
+        <form>
+            <input size="40" type="text" id="username" placeholder="username here"> <br><br><br>
+            <input size="40" type="password" id="password" placeholder="password here"><br><br><br>
+            <input size="40" type="email" id="email" placeholder="email here"><br><br><br>
+            <button onclick="register()">Register</button>
+
+        </form>
+    </center>
+
+
+    <!--  
+
+           1. capture fields 
+           2. create an array of users in local storage 
+           3. when user clicks on register, store the details in to local storage.
+
+    -->
+    <script>
+
+
+
+        if (localStorage.getItem('users') == null) {
+            localStorage.setItem('users', JSON.stringify([]));
+        }
+
+
+        function register() {
+
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+
+            var user = {
+                username: username,
+                password: password,
+                email: email
+            }
+
+            var users = JSON.parse(localStorage.getItem("users"));
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            window.location.href = "../Dashboard/dashboard.html";
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
