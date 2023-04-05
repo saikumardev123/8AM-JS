@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // ES5
+        function f1(username, password) {
+            if (username == undefined) {
+                username = "guest";
+            }
+            if (password == undefined) {
+                password = "guest"
+            }
+            console.log(username, password);
+        }
+        //f1();
+        // ES6
+        function f2(username = "guest", password = "guest") {
+            console.log(username, password);
+        }
+        f2(undefined, "kiran");
+
+    </script>
+</body>
+
+</html>

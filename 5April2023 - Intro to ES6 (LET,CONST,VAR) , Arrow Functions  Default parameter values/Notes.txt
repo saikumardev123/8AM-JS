@@ -1,0 +1,148 @@
+ES6:  ECMA Script 6
+
+ES6 is an extension / a minor release of ES5. 
+
+let / const / var : 
+
+
+
+using let, we can create block scoped variables. 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        function f1() {
+            var a = 100;
+            console.log(a); // 100
+            if (a > 10) {
+                let a = 900;
+                console.log(a); // 900
+            }
+            console.log(a); // 100
+        }
+        f1();
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+var: local and global variables
+
+
+
+const: 
+
+const is used to store fixed(can be modified in case of non-primitive types) values in a variable. however, 
+we can modify the content but cannot be reassigned. 
+
+w.r.t Object:
+
+const employee = {
+            eid: 101,
+            name: "kiran"
+        }
+        employee = {}; // error
+
+
+w.r.t Array: 
+
+const arr = [1, 2, 3, 4];
+        arr.push(100);
+        console.log(arr[4]); // 100
+        arr = [];// error
+
+w.r.t Primitive Types:  We cannot modify the data since primitive values need to be reassigned to modify.
+
+
+Arrow Functions:
+
+Arrow functions are modern syntax for  es5 general functions. Arrow functions allows us to write single liner functions.
+We should choose arrow functions only when we want to write single liner functions. 
+
+
+  function square(num) {
+            return num * num;
+        }
+
+        console.log(square(10));
+
+
+        // arrow function
+        var sqr = num => num * num;
+        console.log(sqr(2))
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+
+        var arr = [10, 23, 4, 5, 66, 7];
+
+        // arr.forEach(function (value) {
+        //     console.log(value);
+        // });
+
+        arr.forEach(value => console.log(value));
+
+        console.log(arr.map(value => value * 2));
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+default parameter values:
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        // ES5
+        function f1(username, password) {
+            if (username == undefined) {
+                username = "guest";
+            }
+            if (password == undefined) {
+                password = "guest"
+            }
+            console.log(username, password);
+        }
+        //f1();
+        // ES6
+        function f2(username = "guest", password = "guest") {
+            console.log(username, password);
+        }
+        f2("x", "y");
+
+    </script>
+</body>
+
+</html>
+
+
+
+
