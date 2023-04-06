@@ -1,0 +1,149 @@
+Rest Params: 
+
+used to store additional parameters.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        // ES5
+        function f1(a, b) {
+            console.log(a, b);
+            console.log(arguments[4]);
+            //  convert the object into an array 
+
+            // find the length of the parameters 
+
+            // get the partial / rest items of the array. 
+        }
+        //f1(90, 8, 7, 6, 5);
+
+        // ES6 
+
+        function f2(a, b, ...additionalArgs) { // rest params
+            console.log(a, b);
+            console.log(additionalArgs);
+            console.log(additionalArgs.length);
+            console.log(additionalArgs[1]);
+
+        }
+
+        f2(10, 20, 30, 12, 123, 45);
+
+
+    </script>
+
+</body>
+
+</html>
+
+Spread Operator:
+
+spread operator is used to split/spread the array and assign the values.
+
+<script>
+
+        function f2(a, b, c, d) { // rest params
+            console.log(a, b, c, d); // 
+
+        }
+
+        var arr = [10, 20, 30, 40];
+        f2(arr[0], arr[1], arr[2], arr[3]);
+        f2(...arr); // spread operator
+
+
+    </script>
+
+String Interpolation:
+
+SI allows us to write free style of text in multiple lines.
+
+
+PS: Create a string in the following format. 
+     
+      Hello  <user>, 
+
+                       Your subscription is expired, please renewal your 
+                       subscription to aviod the interuption on the services. 
+
+        Thanks, 
+        Team
+
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        var str = " Hello  Kiran, \n\n \t\t\t\t  Your subscription is expired, please renewal your subscription to aviod the interuption on the services. \n\n\t\t Thanks, Team";
+        console.log(str);
+
+        var str2 = `
+        
+                  Hello Kiran, 
+
+                         Your subscriotion is expired. Please renew it. 
+
+                Thanks,
+                Rajesh
+        
+        `
+
+        console.log(str2);
+    </script>
+
+</body>
+
+</html>
+
+
+
+Custom Interpolation: 
+
+The custom interpolation is used to incorporate the dynamic values to the string.
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+
+        var username = "rajesh";
+        var dateOfExpiry = "21 march 2023";
+        var deactivationDate = "12April2023";
+        var regards = "Support Team";
+
+        var str2 = `
+                  Hello ${username}, 
+                         Your subscription is expired on ${dateOfExpiry}. Please renew it before ${deactivationDate} to continue the services
+
+                Thanks,
+                ${regards}
+        `
+        console.log(str2);
+    </script>
+
+</body>
+
+</html>
+
+command to create react application:
+
+npx create-react-app modulesdemo
+
+
