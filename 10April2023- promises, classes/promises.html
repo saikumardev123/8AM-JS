@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        // server side
+        var promise = new Promise((resolve, reject) => {
+            isPromiseFullfilled = true; // 
+            if (isPromiseFullfilled) {
+                resolve({ username: "kiran", address: "hyd" })
+            }
+            else {
+                reject("i value is not greater than 2");
+            }
+        });
+
+        console.log(promise);
+
+        // client side
+
+        promise.then(function (response) {
+            console.log("fulfilled");
+            console.log(response);
+        },
+            function (error) {
+                console.log("rejected");
+                console.log(error);
+            })
+
+        // promise.then((response) => {
+
+        //     console.log(response);
+        // },
+        //     (error) => {
+        //         console.log(error);
+        //     })
+
+        /*
+
+         Promise -> Pending, fullfilled / rejected
+
+        */
+    </script>
+
+</body>
+
+</html>

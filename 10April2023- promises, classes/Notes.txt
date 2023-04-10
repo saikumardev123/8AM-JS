@@ -1,0 +1,96 @@
+Classes: 
+A class is a blue print  / logical design of a realtime object. 
+syntax:
+  class classname{
+        // variables 
+        // methods
+  }
+
+class Customer {
+    customerId;
+    name;
+    accountNumber;
+    accountBalance;
+
+    deposit(amount) {
+        this.accountBalance = amount + this.accountBalance;
+    }
+    withdraw(amount) {
+        this.accountBalance = this.accountBalance - amount;
+    }
+}
+var customer1 = new Customer();
+customer1.accountBalance = 9000;
+customer1.accountNumber = 900;
+customer1.name = "kiran";
+customer1.customerId = 9899;
+console.log(customer1);
+customer1.withdraw(3000);
+customer1.deposit(20000);
+console.log(customer1.accountBalance);
+
+Promises:
+
+Promises are introducted to deal with asynchronous API calls.
+
+We can use axios to handle promises. 
+
+A promise is an object that contains two functions such as 
+resolve(success) and reject(failure). 
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        // server side
+        var promise = new Promise((resolve, reject) => {
+            isPromiseFullfilled = true; // 
+            if (isPromiseFullfilled) {
+                resolve({ username: "kiran", address: "hyd" })
+            }
+            else {
+                reject("i value is not greater than 2");
+            }
+        });
+
+        console.log(promise);
+
+        // client side
+
+        promise.then(function (response) {
+            console.log("fulfilled");
+            console.log(response);
+        },
+            function (error) {
+                console.log("rejected");
+                console.log(error);
+            })
+
+        // promise.then((response) => {
+
+        //     console.log(response);
+        // },
+        //     (error) => {
+        //         console.log(error);
+        //     })
+
+        /*
+
+         Promise -> Pending, fullfilled / rejected
+
+        */
+    </script>
+
+</body>
+
+</html>
+
+There is a library called axios that provides an easy way to make API calls. 
+
+
+
