@@ -1,0 +1,46 @@
+
+Component: 
+
+In React, A component is used to provide / create a functionality that contains 
+the logic and ui of the feature. 
+
+ex: Login, Register, ChangePassword, ForgotPassword. 
+
+syntax: 
+ 
+  function Component_Name(parameters){
+
+     // logic 
+
+     return(
+          // add UI Content
+     )
+
+  }
+
+  To use the component, we need to use the component name as tag name. 
+
+  <Component_Name></Component_Name>
+
+
+  JSX: JavaScript and XML
+
+
+  JSX allows us to write HTML in React.
+
+  JSX makes it easier to write and add HTML in React.
+
+
+  React follows a tree structure of components. 
+
+
+              Root Component (that gets rendered by render function)
+
+
+        Login                  Register 
+
+
+        
+
+
+

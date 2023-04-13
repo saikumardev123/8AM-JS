@@ -10,8 +10,6 @@ function App() {
     }
   )
   // Logic 
-
-
   return (
     <div>
       <h1>Hello</h1>
@@ -21,3 +19,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

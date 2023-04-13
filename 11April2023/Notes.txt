@@ -1,0 +1,46 @@
+React:
+
+React is a frontend javascript library used to create complex reusable User Interface 
+Components to build Single Page Applications and load the content/data 
+faster on the browser. 
+
+SPA: Single Page Applications run on only 1 html web page where the content 
+gets dynamically changed in html file based on user interaction.
+
+React is faster than other frameworks/ libraries, how?
+
+Virtual DOM
+
+ 
+Any Application that we create on top of JS is considered as package. 
+
+These packages are maintained in npmjs repository. 
+
+npm- node package manager. 
+
+Traditional set up: 
+
+1. install create-react-app globally 
+
+       npm install -g create-react-app 
+
+2. create application 
+
+   npm install create-react-app <app-name>
+
+
+Modern: 
+
+ npx install create-react-app <app-name>
+
+ npx - node package execute 
+
+
+
+
+
+
+
+
+
+
