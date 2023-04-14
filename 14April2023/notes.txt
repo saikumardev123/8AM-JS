@@ -1,0 +1,12 @@
+Props: 
+
+We can send data from parent component to child component and also from 
+child component to parent component. 
+
+Parent to Child: 
+
+
+
+
+
+
