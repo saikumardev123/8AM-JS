@@ -1,0 +1,13 @@
+
+State: 
+
+Every component has got UI + Logic and to provide some functionality the data 
+in the component must be maintained. 
+
+Every component maintains the data using state. 
+
+Class Component:
+
+In Class Component, React.Component provides this.state property to 
+maintain the state (data) of the component. 
+
