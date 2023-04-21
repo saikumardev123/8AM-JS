@@ -1,14 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Component1 from './Component1';
 function App() {
-  const greetings = () => {
-    alert("Good Morning!!");
-  }
   return (
     <div className="App">
-      <button onClick={greetings}>Greetings</button>
+      <Component1></Component1>
     </div>
   );
 }
 export default App;
-
