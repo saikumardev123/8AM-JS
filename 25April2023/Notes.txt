@@ -1,0 +1,73 @@
+Composition vs Inheritance:
+
+Inheritance: It is for reusability where a class extends another class 
+to reuse the existing functionality. 
+
+class A{
+
+}
+class B extends A{
+
+}
+
+Multiple Inheritance:
+
+class A{
+
+}
+class B{
+
+}
+class C extends A,B{ // ERROR - Multiple Inheritance is not supported in ES6
+
+}
+
+
+
+App -> SearchBar, VideoList, VideoPlayer 
+
+
+class SearchBar{
+
+}
+class VideoList{
+
+}
+class VideoPlayer{
+
+
+}
+class App extends SearchBar,VideoPlayer, VideoList{ // drawback
+
+
+}
+
+Composition:
+
+Composition is also for resuability of code however it does not extend classes. 
+
+
+class SearchBar{
+
+}
+class VideoList{
+
+}
+class VideoPlayer{
+
+
+}
+class App{
+   SearchBar;
+   VideoList;
+   VideoPlayer;
+}
+So, Composition is more feasible than Inheritance, hence React chose Composition over Inheritance.
+
+
+Thinking in React:
+
+Youtube Clone
+
+//AIzaSyCD3D25-waRMJsn9kGX41IZahz-VY2t2bg
+
