@@ -1,0 +1,40 @@
+Web Services: 
+
+Backend Application:  Develop APIS( a function associated with a URL) and provide 
+access to the data through APIs to front end apps.
+
+Front End Application:  Consumes APIs through XMLHttpRequest, fetch / third party 
+libraries such as axios.
+
+
+Online Free APIs: 
+
+1.
+
+POST:  Adding a user
+
+URL : https://crudcrud.com/api/ad591419359b40ef9f18d7711a38bded/user
+request body:  
+ {
+     username: "",
+     password: "",
+     fullname: ""
+ }
+ 2. 
+
+ GET:  Getting the users 
+
+ URL : https://crudcrud.com/api/ad591419359b40ef9f18d7711a38bded/user
+
+
+3. 
+
+PUT:  https://crudcrud.com/api/ad591419359b40ef9f18d7711a38bded/user/<ID>
+
+request: any data that needs to be updated.
+
+
+4. 
+
+DELETE:  https://crudcrud.com/api/ad591419359b40ef9f18d7711a38bded/user/<ID> 
+

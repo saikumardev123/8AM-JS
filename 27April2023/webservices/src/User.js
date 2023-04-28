@@ -9,7 +9,7 @@ function User() {
             email: ''
         }
     )
-
+    const [users, setUsers] = useState([]);
     const updateState = (event) => {
         var name = event.target.name;
         var value = event.target.value;
@@ -40,6 +40,7 @@ function User() {
         axios.get("https://crudcrud.com/api/ad591419359b40ef9f18d7711a38bded/user").then(
             response => {
                 console.log("response", response);
+                setUsers(response.data);
             },
             error => {
                 console.log("error", error);
@@ -57,6 +58,20 @@ function User() {
                     <button onClick={addUser}>Add User</button>
                 </form>
             </center>
+            <hr></hr>
+            <table border="1" style={{ width: "100%" }}>
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>password</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {renderRows()}
+                </tbody>
+
+            </table>
 
 
         </div>
@@ -64,3 +79,6 @@ function User() {
 
 }
 export default User;
+
+
+
