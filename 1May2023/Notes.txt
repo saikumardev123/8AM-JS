@@ -1,0 +1,15 @@
+Code Splitting: 
+
+
+Once the application is developed, before deploying the application to the server,the following process 
+is followed. 
+
+1. The complete application (js files) is bundled in a file called bundler.js. 
+
+There are lot of bundlers available in the market such as web-pack, browserify..
+
+If the bundler.js file becomes too big, then the initial load of the page takes lot of time which is not 
+considerable.
+
+Bundling process promotes the early loading of the content. To handle this, we need to perform lazy loading. 
+
