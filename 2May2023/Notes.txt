@@ -1,0 +1,24 @@
+                  App  (data)
+
+              A         B 
+
+        X       Y 
+
+     W 
+
+  N 
+
+M     
+
+Context: 
+
+Context is used to make some data available globally to all the 
+components in the application.
+
+
+Generally, Any data that needs to passed to other components, props 
+should be used , however we need to send props to each level till 
+we reach the target component. This is where Context is helpful. 
+Context allows the target component to access the data directly without 
+passing through props on every component.
+
