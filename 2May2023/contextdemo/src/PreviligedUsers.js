@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import UserContext from './UserContext';
-function PreviligedUsers(props) {
+function PreviligedUsers() {
     var pru = useContext(UserContext);
 
     const renderList = () => {
