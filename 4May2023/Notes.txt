@@ -1,0 +1,20 @@
+Task:
+
+
+Create 3 Components, 
+
+1. Products - Show list of Products - https://fakestoreapi.com/products
+2. Users   - Show list of Users - https://jsonplaceholder.typicode.com/users
+3. Posts   - Show list of Posts - https://jsonplaceholder.typicode.com/posts
+
+Create a HOC and write the get API call method that takes API url as an argument and makes the API call and 
+returns the data. 
+
+Use HOC with Products, Users and Posts.
+
+Redux:
+
+
+
+
+

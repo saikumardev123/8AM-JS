@@ -46,7 +46,7 @@ function User() {
     }
     const deleteUser = (_id) => {
         console.log("_id", _id);
-        axios.delete("https://crudcrud.com/api/6bc687c21376474593aaec517fad57de/user/" + _id).then(
+        axios.delete("https://crudcrud.com/api/84ca93b8229140a29955c959e1a535c9/user/" + _id).then(
             response => {
                 console.log(response);
                 getListOfUsers();
@@ -63,7 +63,7 @@ function User() {
         event.preventDefault();
         console.log("user", user);
 
-        axios.post("https://crudcrud.com/api/6bc687c21376474593aaec517fad57de/user", user).then(
+        axios.post("https://crudcrud.com/api/84ca93b8229140a29955c959e1a535c9/user", user).then(
             response => {
                 console.log(response);
                 getListOfUsers();
@@ -82,7 +82,7 @@ function User() {
 
         // var _id = localStorage.getItem("_id");
 
-        axios.put("https://crudcrud.com/api/6bc687c21376474593aaec517fad57de/user/" + userId, user).then(
+        axios.put("https://crudcrud.com/api/84ca93b8229140a29955c959e1a535c9/user/" + userId, user).then(
             response => {
                 console.log(response);
                 alert("user updated");
@@ -96,7 +96,7 @@ function User() {
 
     }
     const getListOfUsers = () => {
-        axios.get("https://crudcrud.com/api/6bc687c21376474593aaec517fad57de/user").then(
+        axios.get("https://crudcrud.com/api/84ca93b8229140a29955c959e1a535c9/user").then(
             response => {
                 console.log("response", response);
                 setUsers(response.data);
