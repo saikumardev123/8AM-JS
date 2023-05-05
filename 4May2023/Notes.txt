@@ -12,7 +12,6 @@ returns the data.
 
 Use HOC with Products, Users and Posts.
 
-Redux:
 
 
 

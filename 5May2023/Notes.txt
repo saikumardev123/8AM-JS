@@ -1,0 +1,23 @@
+Redux:
+
+Redux is a application state management library used to maintain 
+the global data which can be accessible through out the application.
+
+Redux entities: 
+
+Store: contains the application data/state
+
+root reducer: it is responsible for preparing the application state/data and provide it to Store.
+
+reducer:  provides the data to the root reducer.
+
+action:  makes connection to data sources and get the data, provide data to reducer
+
+container: It is a component that interacts with redux. Generally, users interact with Container for 
+performing any action.
+
+
+Container -> action -> reducer -> root reducer -> store (data)
+
+component -> container -> conect function and connects to store and access the data.
+
