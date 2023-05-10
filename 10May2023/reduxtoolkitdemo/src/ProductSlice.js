@@ -12,6 +12,8 @@ const ProductSlice = createSlice(
                 console.log("Action", action);
                 action.payload = products;
                 console.log("addProduct called")
+                // Axios
+                // Make API Call to get the products and update them to the state.
                 products.push({
                     pid: 101,
                     name: "product 1",
@@ -23,7 +25,6 @@ const ProductSlice = createSlice(
         }
     }
 )
-
 export const { addProduct } = ProductSlice.actions
 export default ProductSlice.reducer;
 
