@@ -3,6 +3,7 @@ import Home from './Home';
 import Login from './Login';
 import Register from './Register';
 import Products from './Products';
+import Dashboard from './Dashboard';
 function Navbar() {
     return (
         <>
@@ -33,6 +34,7 @@ function Navbar() {
                     <Route exact path="/login" element={<Login></Login>}></Route>
                     <Route exact path="/register" element={<Register></Register>}></Route>
                     <Route exact path="/products" element={<Products></Products>}></Route>
+                    <Route exact path="/dashboard" element={<Dashboard></Dashboard>}></Route>
                 </Routes>
             </BrowserRouter>
         </>
