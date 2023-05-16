@@ -4,6 +4,7 @@ import Login from './Login';
 import Register from './Register';
 import Products from './Products';
 import Dashboard from './Dashboard';
+import ProductView from './ProductView';
 function Navbar() {
     return (
         <>
@@ -35,6 +36,7 @@ function Navbar() {
                     <Route exact path="/register" element={<Register></Register>}></Route>
                     <Route exact path="/products" element={<Products></Products>}></Route>
                     <Route exact path="/dashboard" element={<Dashboard></Dashboard>}></Route>
+                    <Route exact path="/productview" element={<ProductView></ProductView>}></Route>
                 </Routes>
             </BrowserRouter>
         </>
