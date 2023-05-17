@@ -2,6 +2,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 function Dashboard() {
+
+    if (localStorage.getItem("cart") == null) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
+
     var navigate = useNavigate();
     const [products, setProducts] = useState([]);
     useEffect(
@@ -27,13 +32,13 @@ function Dashboard() {
     const renderList = () => {
 
         let list = products.map(product => {
-            var productWithUI = <div class="col">
-                <div class="card" onClick={() => navigateToProductView(product)}>
+            var productWithUI = <div className="col">
+                <div className="card" onClick={() => navigateToProductView(product)}>
                     <img width="300px" height="550px"
                         src={product.imageUrl}
-                        class="card-img-top" alt="Hollywood Sign on The Hill" />
-                    <div class="card-body">
-                        <h5 class="card-title">{product.name}</h5>
+                        className="card-img-top" alt="Hollywood Sign on The Hill" />
+                    <div className="card-body">
+                        <h5 className="card-title">{product.name}</h5>
                     </div>
                 </div>
             </div>
@@ -47,7 +52,7 @@ function Dashboard() {
         <div>
             <h1>Dashboard</h1>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
 
                 {products.length > 0 ? renderList() : <h1>Products Loading...</h1>}
 

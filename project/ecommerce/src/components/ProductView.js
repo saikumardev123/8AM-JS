@@ -4,33 +4,33 @@ function ProductView() {
     return (
         <div>
             <br></br><br></br><br></br>
-            <div class="container">
-                <div class="card">
-                    <div class="container-fliud">
-                        <div class="wrapper row">
-                            <div class="preview col-md-6">
+            <div className="container">
+                <div className="card">
+                    <div className="container-fliud">
+                        <div className="wrapper row">
+                            <div className="preview col-md-6">
 
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane"><img src={product.imageUrl} /></div>
-                                </div>
+
+                                <img src={product.imageUrl} />
+
 
                             </div>
-                            <div class="details col-md-6">
-                                <h3 class="product-title">{product.name}</h3>
-                                <div class="rating">
-                                    <div class="stars">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
+                            <div className="details col-md-6">
+                                <h3 className="product-title">{product.name}</h3>
+                                <div className="rating">
+                                    <div className="stars">
+                                        <span className="fa fa-star checked"></span>
+                                        <span className="fa fa-star checked"></span>
+                                        <span className="fa fa-star checked"></span>
+                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span>
                                     </div>
-                                    <span class="review-no">41 reviews</span>
+                                    <span className="review-no">41 reviews</span>
                                 </div>
-                                <p class="product-description">{product.description}</p>
-                                <h4 class="price">current price: <span>{product.price}</span></h4>
-                                <div class="action">
-                                    <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                                <p className="product-description">{product.description}</p>
+                                <h4 className="price">current price: <span>{product.price}</span></h4>
+                                <div className="action">
+                                    <button className="add-to-cart btn btn-default" type="button">add to cart</button>
 
                                 </div>
                             </div>
