@@ -5,6 +5,7 @@ import Register from './Register';
 import Products from './Products';
 import Dashboard from './Dashboard';
 import ProductView from './ProductView';
+import Cart from './Cart';
 function Navbar() {
     return (
         <>
@@ -26,6 +27,9 @@ function Navbar() {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/products">Products</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/cart">Cart</Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -37,6 +41,7 @@ function Navbar() {
                     <Route exact path="/products" element={<Products></Products>}></Route>
                     <Route exact path="/dashboard" element={<Dashboard></Dashboard>}></Route>
                     <Route exact path="/productview" element={<ProductView></ProductView>}></Route>
+                    <Route exact path="/cart" element={<Cart></Cart>}></Route>
                 </Routes>
             </BrowserRouter>
         </>

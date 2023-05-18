@@ -1,5 +1,14 @@
 import './Productview.css';
 function ProductView() {
+    if (localStorage.getItem("cart") == null) {
+        localStorage.setItem('cart', JSON.stringify([]));
+    }
+    const addToCart = (product) => {
+        var cartItems = JSON.parse(localStorage.getItem("cart"));
+        cartItems.push(product);
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        alert("Item added to the Cart!");
+    }
     var product = JSON.parse(localStorage.getItem("currentProduct"));
     return (
         <div>
@@ -30,7 +39,7 @@ function ProductView() {
                                 <p className="product-description">{product.description}</p>
                                 <h4 className="price">current price: <span>{product.price}</span></h4>
                                 <div className="action">
-                                    <button className="add-to-cart btn btn-default" type="button">add to cart</button>
+                                    <button onClick={() => addToCart(product)} className="add-to-cart btn btn-default" type="button">add to cart</button>
 
                                 </div>
                             </div>
