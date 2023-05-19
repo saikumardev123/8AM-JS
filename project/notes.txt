@@ -1,0 +1,54 @@
+APIs:
+
+Product add:
+
+req:
+
+ { "description" : "some gfhj",
+        "image_url": "some vcb " ,
+        "name": "product 2" ,
+        "price": 100 ,
+        "quantity":200 ,
+        "seller": "abc"
+ }
+
+ url:   http://localhost:9091/product/add
+
+
+get the list of products:
+url: http://localhost:9091/product/list
+
+
+
+update a product:
+
+url:
+
+http://localhost:9091/product/update
+
+req body:
+
+ {
+        "id": 1,
+        "name": "product 1",
+        "price": 200,
+        "description": "some desc",
+        "imageUrl": "UPDATED SOME URL HERE",
+        "quantity": 900,
+        "seller": "abc"
+    }
+
+delete a product:
+
+http://localhost:9091/product/delete
+
+
+ {
+        "id": 1,
+        "name": "product 1",
+        "price": 200,
+        "description": "some desc",
+        "imageUrl": "UPDATED SOME URL HERE",
+        "quantity": 900,
+        "seller": "abc"
+    }
